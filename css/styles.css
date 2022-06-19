@@ -1,0 +1,501 @@
+/* Global Values Start */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 10px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(216, 30%, 68%);
+    padding: 10px;
+}
+
+.active {
+    border: 1px solid black;
+    color: #000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    header .container {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    li {
+        margin: 0 20px;
+        padding: 0;
+        font-size: 13px;
+    }
+
+    li:nth-child(1) {
+        width: 45%;
+    }
+
+    li:nth-child(2) {
+        width: 10%;
+    }
+
+    li:nth-child(3) {
+        width: 10%;
+    }
+
+    li:nth-child(4) {
+        width: 40%;
+    }
+
+    a {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .active {
+        border: none;
+        color: hsl(216, 30%, 68%);
+    }
+}
+
+@media (max-width: 374px) {
+    li {
+        font-size: 10px;
+    }
+
+    li:nth-child(1) {
+        width: 60%;
+    }
+
+    li:nth-child(4) {
+        width: 50%;
+    }
+}
+/* Global Values End */
+
+/* Header Start */
+header {
+    padding: 20px 0;
+    background-color: hsl(0, 0%, 98%);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+/* Header End */
+
+/* Landing Start */
+.landing-section {
+    padding: 50px 0;
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+    position: relative;
+}
+
+.landing-section .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.landing-section .text {
+    width: 40%;
+}
+
+.landing-section .text h1 {
+    font-size: 60px;
+    position: relative;
+}
+
+.landing-section .text h1::before {
+    content: "";
+    width: 30%;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-top: 1px solid #EEE;
+}
+
+.landing-section .text p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+.landing-section .text button {
+    width: 30%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #DDD;
+    color: white;
+    cursor: pointer;
+}
+
+.landing-section .image img {
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    top: 11%;
+}
+
+.landing-section .bg-1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.landing-section .bg-2 {
+    position: absolute;
+    left: 0;
+    bottom: -65%;
+    z-index: 1;
+}
+
+.landing-section .bg-3 {
+    display: none;
+}
+
+.landing-section .bg-4 {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .landing-section .text h1 {
+        font-size: 35px;
+    }
+
+    .landing-section .text p {
+        font-size: 15px;
+    }
+
+    .landing-section .image img {
+        width: 50%;
+        top: 30%;
+    }
+
+    .landing-section .text button {
+        width: 40%;
+    }
+
+    .landing-section .bg-1 {
+        width: 40%;
+    }
+    
+    .landing-section .bg-2 {
+        width: 20%;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-section {
+        padding: 0 0 50px 0;
+        margin-bottom: 100px;
+    }
+
+    .landing-section .container {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .landing-section .image img {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .landing-section .text {
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .landing-section .text h1 {
+        font-size: 35px;
+    }
+
+    .landing-section .text h1::before {
+        content: "";
+        border: none;
+    }
+
+    .landing-section .text p {
+        width: 100%;
+        margin: auto;
+        font-size: 20px;
+    }
+
+    .landing-section .text button {
+        margin: auto;
+        width: 50%;
+    }
+
+    .landing-section .bg-1 {
+        display: none;
+    }
+    
+    .landing-section .bg-2 {
+        display: none;
+    }
+
+    .landing-section .bg-3 {
+        display: block;
+        position: absolute;
+        top: 45%;
+    }
+    
+    .landing-section .bg-4 {
+        display: block;
+        position: absolute;
+        bottom: -20%;
+        right: 0;
+    }
+}
+/* Landing End */
+
+/* Services Start */
+.services-section {
+    margin: 200px 0;
+    padding: 50px 0;
+    position: relative;
+}
+
+.services-section .text h1 {
+    font-size: 60px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.services-section .text h1::before {
+    content: "";
+    width: 12%;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-top: 1px solid #000;
+}
+
+.services-section .container .services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services-section .container .services .service {
+    width: 30%;
+}
+
+.services-section .services .service img {
+    margin-bottom: 20px;
+}
+
+.services-section .services .service h2 {
+    margin-bottom: 10px;
+}
+
+.services-section .services .service p {
+    line-height: 1.3;
+    color: #777;
+}
+
+@media (max-width: 767px) {
+    .services-section {
+        margin: auto;
+        text-align: center;
+    }
+
+    .services-section .container {
+        width: 100%;
+    }
+
+    .services-section .services {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        width: 100%;
+    }
+
+    .services-section .container .services .service {
+        margin: auto;
+        width: 90%;
+    }
+
+    h1::before {
+        content: "";
+        display: none;
+    }
+}
+/* Services End */
+
+/* About Start */
+.about-section {
+    padding: 50px 0;
+    margin: 200px 0;
+}
+
+.about-section .container {
+    background-color: hsl(256, 26%, 20%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+    position: relative;
+}
+
+.about-section .container .pc {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+.about-section .container .mobile {
+    display: none;
+}
+
+.about-section .container .text h1 {
+    font-size: 60px;
+    width: 60%;
+}
+
+.about-section .container .button button {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #DDD;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .about-section .container {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-section .container .pc {
+        display: none;
+    }
+
+    .about-section .container .mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+    .about-section .container .text h1 {
+        width: 100%;
+    }
+}
+/* About End */
+
+/* Footer Start */
+.footer-section {
+    padding: 50px 0;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+}
+
+.footer-section .pc {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.footer-section .mobile {
+    display: none;
+}
+
+.footer-section .icons {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #777;
+    padding: 0 0 20px 0;
+    margin-bottom: 30px;
+}
+
+.footer-section .icons .social img {
+    margin: 0 5px;
+}
+
+.footer-section .links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section .links .column .title {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.footer-section .links .column .link {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 767px) {
+    .footer-section .pc {
+        display: none;
+    }
+
+    .footer-section .mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    .footer-section .icons {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section .icons .logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-section .links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section .links .title {
+        margin-top: 20px;
+    }
+}
+/* Footer End */
